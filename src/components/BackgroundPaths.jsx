@@ -51,7 +51,7 @@ function FloatingPaths({
     });
   }, [position, count, baseColor, widthStart, widthStep, speed]);
 
-  const safeSpeed = Array.isArray(speed) && speed.length === 2 ? speed : [10, 25];
+  // const safeSpeed = Array.isArray(speed) && speed.length === 2 ? speed : [10, 25];
   // const dropShadowColor = baseColor.replace(/ /g, "");
 
   return (
