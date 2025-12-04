@@ -1,10 +1,8 @@
-import Logo from "@/src/components/Logo"
 import NavigationBar from "@/src/components/NavigationBar";
 import BackgroundPaths from "@/src/components/BackgroundPaths";
 import Carousel from "@/src/components/Carousel";
 import Footer from "@/src/components/Footer";
-
-
+import HeroSection from "@/src/components/heroSection";
 
 
 export default function Home() {
@@ -17,7 +15,7 @@ export default function Home() {
       </div>
       <div className="flex justify-center items-center w-full h-[100vh]">
         <div className="w-[20vw] relative">
-          <Logo />
+          <HeroSection />
         </div>
       </div>
 
