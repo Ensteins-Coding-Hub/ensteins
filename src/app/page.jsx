@@ -2,6 +2,7 @@ import Logo from "@/src/components/Logo"
 import NavigationBar from "@/src/components/NavigationBar";
 import BackgroundPaths from "@/src/components/BackgroundPaths";
 import Carousel from "@/src/components/Carousel";
+import Footer from "@/src/components/Footer";
 
 
 
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="bg-black w-full h-full flex justify-center p-[100px]">
         <Carousel slides={["https://picsum.dev/200/100", "https://picsum.dev/200/99", "https://picsum.dev/200/98"]} />
       </div>
+      <Footer />
     </main >
   );
 }
