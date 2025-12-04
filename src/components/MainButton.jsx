@@ -2,7 +2,7 @@ export default function Button({ children, onClick, className = "" }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 sm:px-8 lg:px-10 py-2.5 sm:py-3 lg:py-3.5 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-colors duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 uppercase ${className}`}
+      className={`px-6 sm:px-8 lg:px-10 py-2.5 sm:py-3 lg:py-3.5 bg-SpecialBlue hover:bg-SpecialBlueHovered text-white rounded-full transition-colors duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 uppercase ${className}`}
       style={{
         fontFamily: 'Gudea, sans-serif',
         fontWeight: 700,
