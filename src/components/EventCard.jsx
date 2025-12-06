@@ -26,20 +26,20 @@ const EventCard = ({
           backgroundColor: timeBoxColor
         }}
       >
-        <span className="text-[24px] text-black font-normal font-['Gudea']">
+        <span className="text-[24px] text-black font-normal font-sans">
           {day}
         </span>
-        <span className="text-[48px] text-black font-semibold font-['Gudea']">
+        <span className="text-[48px] text-black font-semibold font-sans">
           {time}
         </span>
       </section>
       
       {/* Event Details */}
       <div className="flex flex-col items-start justify-start -mt-10 gap-[5px]">
-        <span className="text-[32px] text-black font-normal font-['Gudea']">
+        <span className="text-[32px] text-black font-normal font-sans">
           {title}
         </span>
-        <span className="text-[20px] text-black font-normal font-['Gudea']">
+        <span className="text-[20px] text-black font-normal font-sans">
           {description}
         </span>
       </div>

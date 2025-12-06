@@ -36,10 +36,10 @@ const EventsSection = () => {
         
         {/* Title */}
         <h1>
-          <span className="text-[48px] text-white font-bold font-['Gudea']">
+          <span className="text-[48px] text-white font-bold font-sans">
             UPCOMING
           </span>
-          <span className="text-[64px] text-[#0A93E2] font-bold font-['Gudea'] ml-2.5">
+          <span className="text-[64px] text-[#0A93E2] font-bold font-sans ml-2.5">
             EVENTS 
           </span>
         </h1>
