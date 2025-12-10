@@ -36,7 +36,7 @@ function FloatingPaths({
   baseColor = "10, 50, 200",
   widthStart = 1.8,
   widthStep = 0.06,
-  speed = [10, 25],
+  speed = [5, 15],
 }) {
 
   const paths = useMemo(() => {
@@ -92,7 +92,8 @@ export default function BackgroundPaths() {
   return (
     <div className="absolute inset-0">
       <FloatingPaths position={1} count={40} />
-      {/* <FloatingPaths position={-1} count={20} widthStart={0.5} /> */}
+      {/* <FloatingPaths position={-2} count={40} /> */}
+      <FloatingPaths position={-2} count={20} widthStart={1} />
     </div>
   );
 }
