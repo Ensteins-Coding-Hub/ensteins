@@ -1,59 +1,57 @@
-import Button from '@/src/components/MainButton';
+import Button from "@/src/components/Button";
 
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
+      className="
+        relative min-h-screen flex items-center justify-center 
+        px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20
+        w-screen
+      "
     >
-      {/*
-      * style={{
-      *   background: 'linear-gradient(180.2deg, #000000 -4.03%, #140555 99.86%)'
-      * }}
-      */}
+      <div className="absolute -z-10 top-0 right-0 sm:top-0 sm:-right-80 w-[70vw] h-[70vw] rounded-full bg-linear-to-bl from-[#5c92ff] via-transparent to-transparent opacity-40 blur-3xl animate-pulse" />
+      <div className="absolute -z-10 bottom-0 left-0 sm:-bottom-10 sm:-left-50 w-[40vw] h-[40vw] rounded-full bg-linear-to-bl from-transparent via-transparent to-[#5c92ff] opacity-40 blur-3xl animate-pulse" />
 
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-white mb-4">
+        <h1 className="text-white mb-8 leading-tight">
           <div
-            className="uppercase mb-2"
-            style={{
-              fontFamily: 'Audiowide, sans-serif',
-              fontWeight: 400,
-              fontSize: '32px',
-              lineHeight: '100%',
-              letterSpacing: '0%'
-            }}
+            className="
+              uppercase 
+              text-2xl sm:text-3xl md:text-4xl
+            "
+            style={{ fontFamily: "Audiowide, sans-serif" }}
           >
             We Make
           </div>
+
           <div
-            className="uppercase"
-            style={{
-              fontFamily: 'Audiowide, sans-serif',
-              fontWeight: 400,
-              fontSize: '64px',
-              lineHeight: '100%',
-              letterSpacing: '0%'
-            }}
+            className="
+              uppercase 
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+              mt-1
+            "
+            style={{ fontFamily: "Audiowide, sans-serif" }}
           >
             TECHNOLOGY
           </div>
+
           <div
-            className="uppercase mt-2"
-            style={{
-              fontFamily: 'Audiowide, sans-serif',
-              fontWeight: 400,
-              fontSize: '32px',
-              lineHeight: '100%',
-              letterSpacing: '0%'
-            }}
+            className="
+              uppercase 
+              text-2xl sm:text-3xl md:text-4xl 
+              mt-2
+            "
+            style={{ fontFamily: "Audiowide, sans-serif" }}
           >
             Move
           </div>
         </h1>
-        <div className="mt-12">
-          <Button><span className='m-10 mt-3.5' >Join Us</span></Button>
+
+        <div className="mt-10 flex justify-center">
+          <Button className="px-10 py-3 text-lg sm:text-xl">Join Us</Button>
         </div>
       </div>
+
       <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
         rel="stylesheet"

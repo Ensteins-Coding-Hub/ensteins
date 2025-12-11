@@ -1,45 +1,44 @@
 import React from 'react';
 
-const EventCard = ({ 
-  day = "TODAY", 
-  time = "9:00", 
-  title = "ENSTA RACE", 
+const EventCard = ({
+  day = "TODAY",
+  time = "9:00",
+  title = "ENSTA RACE",
   description = "waiting you to join idk what to write",
-  backgroundColor = "#D9D9D9",
   timeBoxColor = "#ECADE8B2",
-  width = "930px",
-  height = "169px"
 }) => {
   return (
-    <section 
-      className="rounded-[20px] p-[18px] flex flex-row items-center gap-[23px]"
-      style={{
-        width: width,
-        height: height,
-        backgroundColor: backgroundColor
-      }}
+    <section
+      className="
+        w-full max-w-[900px]
+        rounded-2xl p-5
+        flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8
+        bg-white/5 backdrop-blur-md border border-white/20
+        transition-all
+      "
     >
-      {/* Time Box */}
-      <section
-        className="w-[168px] h-[141px] rounded-[20px] flex flex-col items-center justify-center"
-        style={{
-          backgroundColor: timeBoxColor
-        }}
+      <div
+        className="
+          w-full sm:w-[160px]
+          h-[120px]
+          rounded-2xl flex flex-col items-center justify-center
+          shrink-0
+        "
+        style={{ backgroundColor: timeBoxColor }}
       >
-        <span className="text-[24px] text-black font-normal font-sans">
+        <span className="text-black text-xl sm:text-2xl font-semibold">
           {day}
         </span>
-        <span className="text-[48px] text-black font-semibold font-sans">
+        <span className="text-black text-4xl sm:text-5xl font-bold">
           {time}
         </span>
-      </section>
-      
-      {/* Event Details */}
-      <div className="flex flex-col items-start justify-start -mt-10 gap-[5px]">
-        <span className="text-[32px] text-black font-normal font-sans">
+      </div>
+
+      <div className="flex flex-col text-center sm:text-left">
+        <span className="text-white text-2xl sm:text-3xl font-semibold">
           {title}
         </span>
-        <span className="text-[20px] text-black font-normal font-sans">
+        <span className="text-white/80 text-base sm:text-xl font-light">
           {description}
         </span>
       </div>

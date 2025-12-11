@@ -127,16 +127,15 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* scrollbar costumisation */
-/* Firefox */
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #3714FF #172036;
 }
 
-/* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   height: 8px;
   width: 8px;

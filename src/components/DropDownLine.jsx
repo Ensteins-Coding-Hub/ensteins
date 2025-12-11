@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import Button from "./MainButton";
 
 export default function DropDownLine() {
   const faqs = [
@@ -31,9 +30,8 @@ export default function DropDownLine() {
 
   return (
     <section className="w-full flex justify-center py-20 px-4">
-      <div
-        className="w-[90%] max-w-5xl rounded-lg p-10 flex flex-col lg:flex-row gap-10 backdrop-blur-sm"
-      >
+      <div className="w-[90%] max-w-5xl rounded-lg p-10 flex flex-col lg:flex-row gap-10 backdrop-blur-sm">
+
         <div className="flex-1 text-white">
           <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
             GET TO KNOW
@@ -41,9 +39,9 @@ export default function DropDownLine() {
             <span className="text-blue-400">ENST</span>EINS
           </h2>
 
-          <Button className="mt-8 px-6 py-2 rounded-full transition shadow-lg">
+          {/* <Button className="mt-8 px-6 py-2 rounded-full transition shadow-lg">
             Learn More
-          </Button>
+          </Button> */}
         </div>
 
         <div className="flex-1 flex flex-col gap-4">
@@ -60,15 +58,20 @@ export default function DropDownLine() {
                   {faq.question}
                 </span>
                 <FiChevronDown
-                  className={`text-blue-400 text-xl transition-transform ${openIndex === i ? "rotate-180" : ""
-                    }`}
+                  className={`text-blue-400 text-xl transition-transform ${
+                    openIndex === i ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               <div
                 className={`
                   transition-all duration-300 text-white/80 px-4 
-                  ${openIndex === i ? "max-h-40 py-2 opacity-100" : "max-h-0 py-0 opacity-0"}
+                  ${
+                    openIndex === i
+                      ? "max-h-40 py-2 opacity-100"
+                      : "max-h-0 py-0 opacity-0"
+                  }
                 `}
               >
                 {faq.answer}

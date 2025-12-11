@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-[#06021A]" >
-        <div className="pb-12" >
+        <div className="pb-12 z-[1000]" >
           <NavigationBar />
         </div>
         {children}
