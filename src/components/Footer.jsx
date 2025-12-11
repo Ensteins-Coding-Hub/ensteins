@@ -1,4 +1,4 @@
-import {FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import SocialIcon from './SocialIcon'
 export default function Footer() {
   return (
@@ -29,11 +29,11 @@ export default function Footer() {
         <div className="w-[90%] h-[1px] bg-gradient-to-r from-transparent via-blue-600/40 to-transparent mb-10"></div>
 
         <div className="text-center leading-relaxed max-w-xl opacity-90 text-[15px]">
-          <p className="font-light">ENSTEINS — where passion meets innovation.</p>
+          <p className="font-light">ENSTEINS — Where Passion Meets Innovation.</p>
           <p className="font-semibold mt-2">
             ENSTA ❤️ National Higher School of Advanced Technologies
           </p>
-          <p className="opacity-70">Ex-biomedical, Bergana, Bordj El Kiffan</p>
+          <p className="opacity-70">Ex-biomedical, Dergana, Bordj El Kiffane</p>
 
           <p className="mt-3 opacity-80 hover:opacity-100 transition text-blue-400 cursor-pointer">
             ensteins@ensta.edu.dz

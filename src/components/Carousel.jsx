@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MainButton from "@/src/components/MainButton"
+import "@/src/components/Carousel.css"
 
 
 
@@ -44,7 +45,7 @@ export default function Carousel({ slides }) {
           </div>
         ))}
       </Slider>
-      <MainButton className="w-[20%] self-center">
+      <MainButton className="w-[20%] self-center mt-10">
         More Events
       </MainButton>
     </div>
