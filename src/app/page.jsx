@@ -30,9 +30,10 @@ export default function Home() {
       <div id="memos" className="w-full h-full flex justify-center p-[100px]">
         <Carousel
           slides={[
-            "https://picsum.dev/200/100",
-            "https://picsum.dev/200/99",
-            "https://picsum.dev/200/98",
+            "memo1.jpg",
+            "memo2.jpg",
+            "memo3.jpg",
+            "memo4.jpg",
           ]}
         />
       </div>

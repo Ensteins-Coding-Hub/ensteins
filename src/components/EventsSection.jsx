@@ -5,41 +5,41 @@ const EventsSection = () => {
   const events = [
     {
       id: 1,
-      day: "TODAY",
+      day: "04/11/2025",
       time: "9:00",
       title: "ENSTA RACE",
-      description: "waiting you to join idk what to write",
+      description: "May the Gloriest Empire Win the BAttle",
       timeBoxColor: "#ECADE8B2",
     },
     {
       id: 2,
-      day: "TOMORROW",
+      day: "18/02/2025",
       time: "14:30",
-      title: "WORKSHOP TECH",
+      title: "InTech",
       description: "Learn new technologies and network with professionals",
       timeBoxColor: "#ADC9ECB2",
     },
     {
       id: 3,
-      day: "FRIDAY",
+      day: "28/11/2024",
       time: "18:00",
-      title: "NETWORKING EVENT",
-      description: "Connect with industry leaders and peers",
+      title: "WeeHack",
+      description: "Problem, solution.. Something is being cooked!",
       timeBoxColor: "#E5ECADB2",
     },
   ];
 
   return (
     <div className="flex flex-col items-center justify-center gap-14 px-4 py-20">
-      {/* <div className="absolute w-[30vw] h-[30vw] rounded-full bg-linear-to-bl from-transparent via-[#5c92ff] to-transparent opacity-40 blur-3xl animate-pulse" /> */}
-      {/* <div className="absolute -right-30 w-[80vw] h-[80vw] rounded-full bg-linear-to-l from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" /> */}
-      {/* <div className="absolute -left-30 w-[70vw] h-[70vw] rounded-full bg-linear-to-r from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" /> */}
+      <div className="absolute w-[30vw] h-[30vw] rounded-full bg-linear-to-bl from-transparent via-[#5c92ff] to-transparent opacity-40 blur-3xl animate-pulse" />
+      <div className="absolute -right-30 w-[80vw] h-[80vw] rounded-full bg-linear-to-l from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
+      <div className="absolute -left-30 w-[70vw] h-[70vw] rounded-full bg-linear-to-r from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
 
       <h1 className="text-center">
-        <span className="text-6xl md:text-3xl sm:text-2xl text-white font-bold">
+        {/* <span className="text-6xl md:text-3xl sm:text-2xl text-white font-bold">
           UPCOMING
-        </span>
-        <span className="text-6xl md:text-3xl sm:text-2xl text-[#0A93E2] font-bold ml-3">
+        </span> */}
+        <span className="text-4xl sm:text-6xl text-[#0A93E2] font-bold ml-3">
           EVENTS
         </span>
       </h1>

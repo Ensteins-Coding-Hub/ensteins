@@ -1,4 +1,5 @@
 import Button from "@/src/components/Button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -9,8 +10,8 @@ export default function HeroSection() {
         w-screen
       "
     >
-      {/* <div className="absolute -z-10 top-0 right-0 sm:top-0 sm:-right-80 w-[70vw] h-[70vw] rounded-full bg-linear-to-bl from-[#5c92ff] via-transparent to-transparent opacity-40 blur-3xl animate-pulse" /> */}
-      {/* <div className="absolute -z-10 bottom-0 left-0 sm:-bottom-10 sm:-left-50 w-[40vw] h-[40vw] rounded-full bg-linear-to-bl from-transparent via-transparent to-[#5c92ff] opacity-40 blur-3xl animate-pulse" /> */}
+      <div className="absolute -z-10 top-0 right-0 sm:top-0 sm:-right-80 w-[70vw] h-[70vw] rounded-full bg-linear-to-bl from-[#5c92ff] via-transparent to-transparent opacity-40 blur-3xl animate-pulse" />
+      <div className="absolute -z-10 bottom-0 left-0 sm:-bottom-10 sm:-left-50 w-[40vw] h-[40vw] rounded-full bg-linear-to-bl from-transparent via-transparent to-[#5c92ff] opacity-40 blur-3xl animate-pulse" />
 
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-white mb-8 leading-tight">
@@ -47,9 +48,9 @@ export default function HeroSection() {
           </div>
         </h1>
 
-        <div className="mt-10 flex justify-center">
-          <Button className="px-10 py-3 text-lg sm:text-xl">Join Us</Button>
-        </div>
+        <Link href={"/contact-us"} className="mt-10 flex justify-center">
+          <Button className="px-10 py-3 text-lg sm:text-xl">Reach Us</Button>
+        </Link>
       </div>
 
       <link

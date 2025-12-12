@@ -38,6 +38,9 @@ export default function ContactBox() {
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <BackgroundPaths />
+      <div className="absolute w-[30vw] h-[30vw] rounded-full bg-linear-to-bl from-transparent via-[#5c92ff] to-transparent opacity-40 blur-3xl animate-pulse" />
+      <div className="absolute -right-30 w-[80vw] h-[80vw] rounded-full bg-linear-to-l from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
+      <div className="absolute -left-30 w-[70vw] h-[70vw] rounded-full bg-linear-to-r from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
 
       <div className="relative w-[80vw] z-10">
         <div className="backdrop-blur-sm bg-white/5 border border-white/20 rounded-2xl p-8 space-y-8">
@@ -54,7 +57,10 @@ export default function ContactBox() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="name" className="block text-sm font-medium text-white/80">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-white/80"
+              >
                 Your Name
               </label>
               <input
@@ -69,7 +75,10 @@ export default function ContactBox() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-white/80">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-white/80"
+              >
                 Your Email
               </label>
               <input
@@ -84,7 +93,10 @@ export default function ContactBox() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="block text-sm font-medium text-white/80">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-white/80"
+              >
                 Message
               </label>
               <textarea
@@ -106,8 +118,12 @@ export default function ContactBox() {
               {sending ? "Sending..." : "Send Message"}
             </Button>
 
-            {success === true && <p className="text-green-400 mt-2">Message sent successfully!</p>}
-            {success === false && <p className="text-red-400 mt-2">Failed to send message.</p>}
+            {success === true && (
+              <p className="text-green-400 mt-2">Message sent successfully!</p>
+            )}
+            {success === false && (
+              <p className="text-red-400 mt-2">Failed to send message.</p>
+            )}
           </form>
         </div>
       </div>
