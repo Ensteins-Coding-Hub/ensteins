@@ -39,15 +39,15 @@ export default function NavigationBar() {
     <>
       <nav
         className={`
-          fixed top-0 left-0 w-full z-50
+          fixed top-0 left-0 h-20 w-full z-50
           flex justify-between items-center
           py-5 px-6 md:px-10 text-white
-          bg-black/40 backdrop-blur-md
+          bg-linear-to-b from-white/5 via-black/10 to-white/5 backdrop-blur-md
           transition-transform duration-500
           ${visible ? "translate-y-0" : "-translate-y-full"}
           after:content-[''] after:absolute after:left-0 after:bottom-0
           after:w-full after:h-0.5
-          after:bg-gradient-to-r after:from-transparent after:via-blue-500/40 after:to-transparent
+          after:bg-linear-to-r after:from-transparent after:via-blue-500/40 after:to-transparent
         `}
       >
         <div className="w-[45px] cursor-pointer hover:scale-110 transition-transform duration-300">
@@ -85,7 +85,7 @@ export default function NavigationBar() {
       <div
         className={`
           md:hidden fixed top-0 left-0 w-full h-screen
-          bg-black/80 backdrop-blur-xl text-white z-[49]
+          bg-black/80 backdrop-blur-xl text-white z-49
           flex flex-col items-center justify-center gap-8
           text-2xl font-semibold
           transition-all duration-500

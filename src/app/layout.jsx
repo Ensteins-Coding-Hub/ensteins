@@ -1,4 +1,4 @@
-import "@/src/app/globals.css";
+import "./globals.css";
 import NavigationBar from "../components/NavigationBar";
 
 export const metadata = {
@@ -9,8 +9,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#06021A]" >
-        <div className="pb-12 z-[1000]" >
+      <body className="bg-[#06021A] overflow-x-hidden" >
+        <div className="pb-12 z-1000" >
           <NavigationBar />
         </div>
         {children}

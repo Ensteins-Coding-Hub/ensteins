@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import Button from "@/src/components/Button";
-import Link from "next/link";
 import BackgroundPaths from "@/src/components/BackgroundPaths";
+import MembersSectionGrid from "@/src/components/membersSectionGrid";
 
 export default function MemoriesPage() {
   return (
@@ -12,8 +11,8 @@ export default function MemoriesPage() {
       <div className="absolute -right-30 w-[80vw] h-[80vw] rounded-full bg-linear-to-l from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
       <div className="absolute -left-30 w-[70vw] h-[70vw] rounded-full bg-linear-to-r from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
       <BackgroundPaths />
-      <div className="backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl p-12 text-center max-w-lg mx-auto">
-        <h1 className="text-5xl sm:text-6xl font-semibold text-white mb-6 tracking-wide">
+      {/* <div className="backdrop-blur-md bg-white/5 border border-white/20 rounded-2xl p-12 text-center max-w-lg mx-auto"> */}
+        {/* <h1 className="text-5xl sm:text-6xl font-semibold text-white mb-6 tracking-wide">
           Coming Soon
         </h1>
 
@@ -25,8 +24,9 @@ export default function MemoriesPage() {
           <Button className="px-8 py-3 text-lg hover:scale-105 transition-transform duration-300">
             Back to Home
           </Button>
-        </Link>
-      </div>
+        </Link> */}
+        <MembersSectionGrid />
+      {/* </div> */}
     </div>
   );
 }

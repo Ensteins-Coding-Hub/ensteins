@@ -13,13 +13,14 @@ const EventCard = ({
         w-full max-w-[900px]
         rounded-2xl p-5
         flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8
-        bg-white/5 backdrop-blur-md border border-white/20
+        backdrop-blur-xs bg-linear-to-bl from-white/10 via-black/10 to-white/15
+        border border-white/20
         transition-all
       "
     >
       <div
         className="
-          w-full sm:w-[160px]
+          w-full sm:w-40
           h-[120px]
           rounded-2xl flex flex-col items-center justify-center
           shrink-0

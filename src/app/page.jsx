@@ -29,17 +29,11 @@ export default function Home() {
 
       <div id="memos" className="w-full h-full flex justify-center p-[100px]">
         <Carousel
-          slides={[
-            "memo1.jpg",
-            "memo2.jpg",
-            "memo3.jpg",
-            "memo4.jpg",
-          ]}
+          slides={["memo1.jpg", "memo2.jpg", "memo3.jpg", "memo4.jpg"]}
         />
       </div>
 
       <ReachUs />
-
       <Footer />
     </main>
   );
