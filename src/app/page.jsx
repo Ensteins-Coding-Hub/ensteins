@@ -1,11 +1,13 @@
 import HeroSection from "../components/heroSection";
+import MembersSection from "../components/membersSection";
 
 
 export default function Home() {
   return (
-    <main className="h-[100vh] w-[100vw]">
-      <div className="flex justify-center items-center w-full h-full">
-        <HeroSection />
+    <main >
+      <div >
+      
+        <MembersSection />
       </div>
     </main>
   );
