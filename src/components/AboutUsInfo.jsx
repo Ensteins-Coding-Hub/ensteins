@@ -8,21 +8,21 @@ const AboutUsInfo = () => {
       title: "ENSTA RACE",
       description: "May the Gloriest Empire Win the Battle",
       imageUrl: "/your-image.jpg",
-      index: 1,
+      
     },
     {
       id: 1,
       title: "InTech",
       description: "Learn new technologies and network with professionals",
       imageUrl: "/your-image.jpg",
-      index: 1,
+      
     },
     {
       id: 2,
       title: "WeeHack",
       description: "Problem, solution.. Something is being cooked!",
       imageUrl: "/your-image.jpg",
-      index: 3,
+      
     },
   ];
 
@@ -43,13 +43,13 @@ const AboutUsInfo = () => {
 
       {/* Cards Container*/}
       <div className="flex flex-col items-center gap-12 w-full max-w-full relative z-10">
-        {aboutUsCards.map((card,index) => (
+        {aboutUsCards.map((card) => (
           <AboutUsCard
             key={card.id}
             title={card.title}
             description={card.description}
             imageUrl={card.imageUrl}
-            isReversed={index % 2 === 1}
+            isReversed={card.id % 2 === 1}
           />
         ))}
       </div>
