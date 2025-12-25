@@ -1,5 +1,6 @@
 import "./globals.css";
 import NavigationBar from "../components/NavigationBar";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Ensteins",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
           <NavigationBar />
         </div>
         {children}
+      <Footer />
       </body>
     </html>
   );

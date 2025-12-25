@@ -1,6 +1,5 @@
 import BackgroundPaths from "@/src/components/BackgroundPaths";
 import Carousel from "@/src/components/Carousel";
-import Footer from "@/src/components/Footer";
 import HeroSection from "@/src/components/HeroSection";
 import EventsSection from "@/src/components/EventsSection";
 import DropDownLine from "@/src/components/DropDownLine";
@@ -34,7 +33,6 @@ export default function Home() {
       </div>
 
       <ReachUs />
-      <Footer />
     </main>
   );
 }
