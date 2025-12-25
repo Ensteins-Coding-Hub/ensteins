@@ -4,25 +4,26 @@ const AboutUsCard = ({
   title = "ENSTA RACE",
   description = "waiting you to join idk what to write",
   imageUrl = "/your-image.jpg", 
+  isReversed = false,
 }) => {
   return (
     <section
-      className="
-        w-full max-w-[900px]
+      className={
+        `w-full max-w-[900px]
         rounded-2xl p-5 sm:p-8
-        flex flex-col lg:flex-row 
-        items-center lg:items-start 
-        gap-6 lg:gap-8
+        flex flex-col ${isReversed ? 'sm:flex-row-reverse' : 'sm:flex-row'}  
+        items-center sm:items-start 
+        gap-6 sm:gap-8
         bg-white/5 backdrop-blur-md 
         border border-white/20
         transition-all
-        mx-auto
-      "
+        mx-auto`
+      }
     >
       {/* Text Content Section */}
       <div
         className="
-          w-full lg:w-[500px]
+          w-full sm:w-[500px]
           rounded-2xl 
           flex flex-col 
           items-start justify-center
@@ -43,7 +44,7 @@ const AboutUsCard = ({
           "
         />
         
-        <span className="text-white text-lg sm:text-xl font-light">
+        <span className="text-white text-sm sm:text-xl font-light">
           {description}
         </span>
       </div>
@@ -51,8 +52,8 @@ const AboutUsCard = ({
       {/* Image/Visual Section */}
       <div
         className="
-          w-full lg:w-[400px]
-          h-48 sm:h-64 lg:h-auto
+          w-full sm:w-[400px]
+          h-48 sm:h-auto
           bg-amber-300
           rounded-2xl
           overflow-hidden

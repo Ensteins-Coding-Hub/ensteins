@@ -4,22 +4,25 @@ import AboutUsCard from "./AboutUsCard";
 const AboutUsInfo = () => {
   const aboutUsCards = [
     {
-      id: 1,
+      id: 0,
       title: "ENSTA RACE",
       description: "May the Gloriest Empire Win the Battle",
       imageUrl: "/your-image.jpg",
+      index: 1,
     },
     {
-      id: 2,
+      id: 1,
       title: "InTech",
       description: "Learn new technologies and network with professionals",
       imageUrl: "/your-image.jpg",
+      index: 1,
     },
     {
-      id: 3,
+      id: 2,
       title: "WeeHack",
       description: "Problem, solution.. Something is being cooked!",
       imageUrl: "/your-image.jpg",
+      index: 3,
     },
   ];
 
@@ -40,12 +43,13 @@ const AboutUsInfo = () => {
 
       {/* Cards Container*/}
       <div className="flex flex-col items-center gap-12 w-full max-w-full relative z-10">
-        {aboutUsCards.map((card) => (
+        {aboutUsCards.map((card,index) => (
           <AboutUsCard
             key={card.id}
             title={card.title}
             description={card.description}
             imageUrl={card.imageUrl}
+            isReversed={index % 2 === 1}
           />
         ))}
       </div>
