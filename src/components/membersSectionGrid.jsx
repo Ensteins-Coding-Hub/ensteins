@@ -59,7 +59,7 @@ export default function MembersSectionGrid() {
   const skeletonCount = cardsToShow || cardsPerRow * 2;
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-8 py-16 relative">
+    <section className="min-h-screen flex items-center justify-center sm:px-8 py-16 relative">
       <div className="w-full max-w-7xl relative z-10">
         <h2 className="text-[60px] font-bold text-white text-center mb-16 leading-[100%] font-['Gudea']">
           Members
@@ -67,7 +67,7 @@ export default function MembersSectionGrid() {
 
         <div className="mb-12 relative">
           <div
-            className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 px-4 max-w-[1600px] mx-auto`}
+            className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-6 px-4 max-w-[1600px] mx-auto`}
             aria-busy={loading}
           >
             {loading
