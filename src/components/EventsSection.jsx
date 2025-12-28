@@ -8,7 +8,7 @@ const EventsSection = () => {
     {
       id: 2,
       day: "year 2026",
-      time: "14:30",
+      time: "09:00",
       title: "InTech",
       description: "Learn new technologies and network with professionals",
       timeBoxColor: "#4F8CFFB2",
@@ -16,7 +16,7 @@ const EventsSection = () => {
     {
       id: 3,
       day: "year 2026",
-      time: "18:00",
+      time: "09:00",
       title: "WeeHack",
       description: "Problem, solution.. Something is being cooked!",
       timeBoxColor: "#4FE3B2B2",

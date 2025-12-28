@@ -28,14 +28,14 @@ export default function Stats() {
           <span className="font-light text-xl sm:text-2xl">members</span>
         </div>
 
-        <div className="bg-SpecialBlue h-[1px] w-full sm:w-[1px] sm:h-16"></div>
+        <div className="bg-SpecialBlue h-px w-full sm:w-px sm:h-16"></div>
 
         <div className="text-center sm:text-left">
           <h1 className="text-3xl sm:text-4xl font-bold">60+</h1>
           <span className="font-light text-xl sm:text-2xl">events</span>
         </div>
 
-        <div className="bg-SpecialBlue h-[1px] w-full sm:w-[1px] sm:h-16"></div>
+        <div className="bg-SpecialBlue h-px w-full sm:w-px sm:h-16"></div>
 
         <div className="text-center sm:text-left">
           <h1 className="text-3xl sm:text-4xl font-bold">20+</h1>
