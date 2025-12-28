@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Logo from "@/src/components/Logo";
 import Button from "@/src/components/Button";
 import Link from "next/link";
@@ -10,6 +10,7 @@ export default function NavigationBar() {
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
   const [openMenu, setOpenMenu] = useState(false);
+  const menuRef = useRef(null);
 
   const pages = [
     { name: "HOME", path: "/" },
@@ -34,6 +35,16 @@ export default function NavigationBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (openMenu && menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpenMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [openMenu]);
 
   return (
     <>
@@ -85,29 +96,38 @@ export default function NavigationBar() {
       <div
         className={`
           md:hidden fixed top-0 left-0 w-full h-screen
-          bg-black/80 backdrop-blur-xl text-white z-49
+          bg-black/80 backdrop-blur-xl text-white z-1000
           flex flex-col items-center justify-center gap-8
           text-2xl font-semibold
           transition-all duration-500
-          ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+          ${
+            openMenu
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }
         `}
       >
-        {pages.map((item) => (
-          <Link
-            key={item.name}
-            href={item.path}
-            onClick={() => setOpenMenu(false)}
-            className="hover:text-blue-400 transition-colors"
-          >
-            {item.name}
-          </Link>
-        ))}
+        <div
+          ref={menuRef}
+          className="flex flex-col items-center gap-8 text-2xl font-semibold"
+        >
+          {pages.map((item) => (
+            <Link
+              key={item.name}
+              href={item.path}
+              onClick={() => setOpenMenu(false)}
+              className="hover:text-blue-400 transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
 
-        <Link href={"/contact-us"} onClick={() => setOpenMenu(false)}>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-xl py-3 px-8">
-            CONTACT
-          </Button>
-        </Link>
+          <Link href={"/contact-us"} onClick={() => setOpenMenu(false)}>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-xl py-3 px-8">
+              CONTACT
+            </Button>
+          </Link>
+        </div>
       </div>
     </>
   );

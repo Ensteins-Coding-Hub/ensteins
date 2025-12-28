@@ -32,9 +32,9 @@ const EventsSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-14 px-4 py-20">
+    <div className="flex flex-col items-center justify-center w-screen overflow-hidden gap-14 px-4 py-20">
       <div className="absolute w-[30vw] h-[30vw] rounded-full bg-linear-to-bl from-transparent via-[#5c92ff] to-transparent opacity-40 blur-3xl animate-pulse" />
-      <div className="absolute -right-30 w-[80vw] h-[80vw] rounded-full bg-linear-to-l from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
+      <div className="relative flex flex-col items-center justify-center w-screen overflow-hidden gap-14 px-4 py-20" />
       <div className="absolute -left-30 w-[70vw] h-[70vw] rounded-full bg-linear-to-r from-[#5c92ff]/40 via-transparent to-transparent opacity-40 blur-3xl" />
 
       <h1 className="text-center">
