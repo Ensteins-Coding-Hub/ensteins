@@ -8,6 +8,32 @@ export const metadata = {
     default: "ENSTEINS Club",
     template: "%s | ENSTEINS",
   },
+  description:
+    "ENSTEINS is a university tech club focused on engineering, science, innovation, AI, and modern technologies.",
+  openGraph: {
+    title: "ENSTEINS Club | We Make Technology Moves",
+    description:
+      "ENSTEINS is a university tech club focused on engineering, science, AI, and innovation.",
+    url: "https://ensteins.tech",
+    siteName: "ENSTEINS",
+    images: [
+      {
+        url: "/og_ensteins_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ENSTEINS Club Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ENSTEINS Club",
+    description:
+      "A university tech club focused on engineering, science, and innovation.",
+    images: ["/og_ensteins_logo.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -59,18 +85,8 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          href="/favicon-32x32.png"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          rel="icon"
-          href="/favicon-16x16.png"
-          sizes="16x16"
-          type="image/png"
-        />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="robots" content="index,follow" />
@@ -81,7 +97,9 @@ export default function RootLayout({ children }) {
         <div className="pb-12 z-1000">
           <NavigationBar />
         </div>
+
         {children}
+
         <Footer />
       </body>
     </html>
