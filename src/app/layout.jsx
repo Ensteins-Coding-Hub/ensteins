@@ -11,7 +11,7 @@ export const metadata = {
   description:
     "ENSTEINS is a university tech club focused on engineering, science, innovation, AI, and modern technologies.",
   openGraph: {
-    title: "ENSTEINS Club | We Make Technology Moves",
+    title: "ENSTEINS Club | We Make Technology Move",
     description:
       "ENSTEINS is a university tech club focused on engineering, science, AI, and innovation.",
     url: "https://ensteins.tech",
@@ -39,7 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const siteUrl = "https://ensteins.tech";
   const ogImage = `${siteUrl}/og_ensteins_logo.png`;
-  const title = "ENSTEINS Club | We Make Technology Moves";
+  const title = "ENSTEINS Club | We Make Technology Move";
   const description =
     "ENSTEINS is a university tech club focused on engineering, science, innovation, AI, and modern technologies.";
   const keywords = [
