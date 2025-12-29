@@ -2,6 +2,7 @@ import "./globals.css";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 
+export const dynamic = 'force-static'
 export const metadata = {
   metadataBase: new URL("https://ensteins.tech"),
 
@@ -33,14 +34,14 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "ENSTEINS Club",
+    title: "ENSTEINS Club\nWe make technology moves",
     description:
       "A university tech club focused on engineering, science, AI, and innovation.",
     url: "https://ensteins.tech",
     siteName: "ENSTEINS",
     images: [
       {
-        url: "/og_ensteins_logo.png",
+        url: "https://ensteins.tech/og_ensteins_logo.png",
         width: 1200,
         height: 630,
         alt: "ENSTEINS Club",
@@ -55,7 +56,7 @@ export const metadata = {
     title: "ENSTEINS Club",
     description:
       "A university tech club focused on engineering, science, and innovation.",
-    images: ["/og_ensteins_logo.png"],
+    images: ["https://ensteins.tech/og_ensteins_logo.png"],
   },
 
   icons: {
