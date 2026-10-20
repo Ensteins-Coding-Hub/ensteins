@@ -3,7 +3,7 @@ import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://ensteins.tech"),
+  metadataBase: new URL("https://ensteins-club.vercel.app"),
   title: {
     default: "ENSTEINS Club",
     template: "%s | ENSTEINS",
@@ -14,7 +14,7 @@ export const metadata = {
     title: "ENSTEINS Club | We Make Technology Move",
     description:
       "ENSTEINS is a university tech club focused on engineering, science, AI, and innovation.",
-    url: "https://ensteins.tech",
+    url: "https://ensteins-club.vercel.app",
     siteName: "ENSTEINS",
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const siteUrl = "https://ensteins.tech";
+  const siteUrl = "https://ensteins-club.vercel.app";
   const ogImage = `${siteUrl}/og_ensteins_logo.png`;
   const title = "ENSTEINS Club | We Make Technology Move";
   const description =
@@ -85,8 +85,18 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link
+          rel="icon"
+          href="/favicon-32x32.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/favicon-16x16.png"
+          sizes="16x16"
+          type="image/png"
+        />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="robots" content="index,follow" />
