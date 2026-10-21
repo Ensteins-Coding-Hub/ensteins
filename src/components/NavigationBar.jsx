@@ -18,7 +18,7 @@ export default function NavigationBar() {
     { name: "MEMORIES", path: "/#memos" },
     { name: "ABOUT US", path: "/#about" },
     { name: "DEPARTEMENTS", path: "/departments" },
-    // { name: "REGISTRATIONS", path: "/registration" },
+    { name: "REGISTRATION", path: "/registration" },
   ];
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function NavigationBar() {
           <Logo />
         </div>
 
-        <ul className="hidden md:flex gap-10 items-center text-lg font-medium">
+        <ul className="hidden md:flex gap-6 lg:gap-10 items-center text-base lg:text-lg font-medium">
           {pages.map((item) => (
             <li
               key={item.name}

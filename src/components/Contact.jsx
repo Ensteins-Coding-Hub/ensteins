@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Button from "./Button";
 import BackgroundPaths from "./BackgroundPaths";
-import emailjs from "@emailjs/browser";
 
 export default function ContactBox() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -19,16 +18,21 @@ export default function ContactBox() {
     setSending(true);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to send message.");
+      }
+
       setSuccess(true);
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error(error);
+      console.error("Contact submit error:", error);
       setSuccess(false);
     } finally {
       setSending(false);

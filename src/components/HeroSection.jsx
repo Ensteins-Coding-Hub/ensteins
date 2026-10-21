@@ -48,9 +48,16 @@ export default function HeroSection() {
           </div>
         </h1>
 
-        <Link href={"/memories"} className="mt-10 flex justify-center">
-          <Button>Learn More</Button>
-        </Link>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <Link href="/registration">
+            <Button>Join Us</Button>
+          </Link>
+          <Link href="/memories">
+            <Button className="!bg-transparent border border-white/30 hover:!bg-white/10">
+              Learn More
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <link

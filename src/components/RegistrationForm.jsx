@@ -54,6 +54,7 @@ export default function RegistrationForm() {
 
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [serverError, setServerError] = useState("");
   const successTimerRef = useRef(null);
 
   const [form, setForm] = useState({
@@ -192,16 +193,20 @@ export default function RegistrationForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setSending(true);
+    setServerError("");
     const newErrors = {};
-    if (!form.name.trim() || form.name.trim() === "")
-      newErrors.name = "Name is required";
-    if (!form.email.trim()) newErrors.email = "Email is required";
+    if (!form.name.trim()) newErrors.name = "Name is required";
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+    }
     if (!selected) newErrors.year = "Please select your year of study";
     if (!selectedSpec)
       newErrors.specialization = "Please select your specialization";
     if (!selectedDept) newErrors.department = "Please select a department";
     if (!form.facebook.trim())
-      newErrors.facebook = "Facebook account is required";
+      newErrors.facebook = "Facebook account or profile is required";
     if (!form.skills.trim()) newErrors.skills = "Please describe your skills";
     if (!form.contribution.trim())
       newErrors.contribution = "Please tell us what you'll bring";
@@ -217,8 +222,11 @@ export default function RegistrationForm() {
       email: form.email.trim(),
       facebook: form.facebook.trim(),
       year: selected.value,
+      yearLabel: selected.label,
       specialization: selectedSpec.value,
+      specializationLabel: selectedSpec.label,
       department: selectedDept.value,
+      departmentLabel: selectedDept.label,
       skills: form.skills.trim(),
       contribution: form.contribution.trim(),
     };
@@ -226,10 +234,24 @@ export default function RegistrationForm() {
     try {
       await submitRegistration(payload);
       setSuccess(true);
+      setForm({
+        name: "",
+        email: "",
+        facebook: "",
+        skills: "",
+        contribution: "",
+      });
+      setSelected(null);
+      setSelectedSpec(null);
+      setSelectedDept(null);
+
       if (successTimerRef.current) clearTimeout(successTimerRef.current);
-      successTimerRef.current = setTimeout(() => setSuccess(false), 3500);
+      successTimerRef.current = setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       console.error("Submission error", err);
+      setServerError(
+        err?.message || "Failed to submit registration. Please try again."
+      );
     } finally {
       setSending(false);
     }
@@ -260,7 +282,7 @@ export default function RegistrationForm() {
             Register Now
           </h2>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit} noValidate>
             <div className="space-y-2">
               <label
                 htmlFor="name"
@@ -318,7 +340,6 @@ export default function RegistrationForm() {
                   type="hidden"
                   name="year"
                   value={selected ? selected.value : ""}
-                  required
                 />
                 <button
                   type="button"
@@ -423,7 +444,6 @@ export default function RegistrationForm() {
                   type="hidden"
                   name="specialization"
                   value={selectedSpec ? selectedSpec.value : ""}
-                  required
                 />
                 <button
                   type="button"
@@ -535,7 +555,6 @@ export default function RegistrationForm() {
                   type="hidden"
                   name="department"
                   value={selectedDept ? selectedDept.value : ""}
-                  required
                 />
 
                 <button
@@ -634,14 +653,17 @@ export default function RegistrationForm() {
               <input
                 id="facebook"
                 name="facebook"
-                type="url"
-                placeholder="https://facebook.com/your.profile"
+                type="text"
+                placeholder="https://facebook.com/your.profile or username"
                 value={form.facebook}
                 onChange={(e) =>
                   setForm((s) => ({ ...s, facebook: e.target.value }))
                 }
                 className="w-full px-5 py-3 bg-white/6 border border-white/12 rounded-2xl text-white text-sm placeholder:text-xs placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#5c92ff]/30 transition-all shadow-sm"
               />
+              {errors.facebook && (
+                <p className="text-red-500 text-xs italic">{errors.facebook}</p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -708,8 +730,14 @@ export default function RegistrationForm() {
             </div>
 
             {success && (
-              <p className="text-green-400 text-center mt-4">
+              <p className="text-green-400 text-center mt-4 font-medium">
                 Registration successful! Thank you for joining us.
+              </p>
+            )}
+
+            {serverError && (
+              <p className="text-red-400 text-center mt-4 font-medium">
+                {serverError}
               </p>
             )}
           </form>

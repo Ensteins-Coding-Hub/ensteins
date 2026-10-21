@@ -10,7 +10,7 @@ const nextConfig = {
             value: "ensteins-club.vercel.app",
           },
         ],
-        destination: "https://ensteins.tech/:path*",
+        destination: "https://ensteins-club.vercel.app/:path*",
         permanent: true,
       },
     ];
