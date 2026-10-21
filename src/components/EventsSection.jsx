@@ -26,7 +26,7 @@ const EventsSection = () => {
       day: "year 2026",
       time: "9:00",
       title: "ENSTA RACE",
-      description: "May the Gloriest Empire Win the BAttle",
+      description: "May the Gloriest Empire Win the Battle",
       timeBoxColor: "#FFD27DB2",
     },
   ];
